@@ -125,10 +125,96 @@ Winkel: https://www.tinytronics.nl/shop/nl/displays/oled/0.96-inch-oled-display-
 
 **Voeding**
 
+**Conrad Energy LiPo accupack**
+
+- Vnomonaal = 7.4 V
+- Inominaal = 1200 mAh
+- Aantal cellen: 2
+- Belastbaarheid: 20 C
+- Aansluiting: XT60, XH-balancer
+- Afmetingen: 112 x 35 x 19 mm
+-Eenheidsprijs: €16,49
+
+
+
+
+Winkel : https://www.conrad.be/nl/p/conrad-energy-lipo-accupack-7-4-v-2400-mah-aantal-cellen-2-20-c-softcase-xt60-1344133.html?t=1&utm_source=google&utm_medium=surfaces&utm_term=1344133&utm_content=free-google-shopping-clicks&utm_campaign=shopping-feed&vat=true&gclid=CjwKCAjwxOCRBhA8EiwA0X8hi6Dpvaew0u-kTnIyrUmKE2RRHzkksSaw41QoJ36AmjOCY1n-dP7VnRoC240QAvD_BwE&gclsrc=aw.ds&tid=13894944235_122657379817_pla-301443522443_pla-1344133&WT.srch=1
+
+
+**Voltage regulator**
+
+**LDL1117S50R**
+
+- Voltage Regulator 5 V
+- Package: SOT223 SMD
+- Voutput = 5 V
+- Vinput = 2.5 - 18 V
+- Ioutput = 1.2 A
+- Eenheidsprijs: €0,56
+
+**Polarriteit beveiliging**
+
+**DMG3414U**
+
+- N-channel MOSFET
+- Package: SOT-23 SMD
+- Vds = 20 V
+- Id = 4.2 A
+- Rds(on) = 0.019 ohm
+- Vgs(th) = 500 mV
+- Pd = 780 mW
+- Eenheidsprijs: 0,72€
+
+reden: 	De DMG3414U heeft een lage threshold spanning zodat deze ook geleid bij een lage spanning, en een Vds en Id die hoog genoeg zijn zodat de MOSFET niet stuk gaat in een schakeling met een 7.2 V batterij. 
+
+Winkel :https://nl.farnell.com/diodes-inc/dmg3414u/mosfet-n-ch-w-diode-20v-4-2a-sot23/dp/2061404?st=mosfet%20n%20smd
+
 **Sensorschakeling**
 
 microcontroller:
-Sensoren
+
+- ATmega328p of arduino Nano
+
+reden: sensoren moeten op een apart bordje komen zodat de line tracker dicht tegen de grond zit. eenvoudiger om een extra Microcontroller hiervoor te gebruiken door teveel verbindingen --> 1 I²C verbinding nodig tussen de 2 bordjes 
+
+
+
+**Sensoren**
+
+**MJKDZ MIR-3.0Y**
+
+- 8x IR Line Tracking Module
+- Vcc = 3 - 5 V
+- Bereik (max. bij 5V) = 40 mm
+- Afmetingen LxB: 17 x 67 mm
+- Eenheidsprijs: €6,00
+
+Winkel :https://www.tinytronics.nl/shop/nl/sensoren/optisch/infrarood/8x-ir-lijn-tracking-module-40mm-bereik
+
+
+**Sharp GP2Y0A21YK0F**
+
+- IR-afstandssensor
+- Vcc = 4.5 - 5.5 V
+- Ityp = 30 mA
+- Bereik: 50 - 800 mm
+- Afmetingen: 29.5 x 13 x 13.5 mm
+- Eenheidsprijs: €5,50 - 12,06
+
+winkel: https://www.tinytronics.nl/shop/nl/sensoren/afstand/sharp-optische-afstandsensor-gp2y0a21yk0f
+
+**HC-SR04**
+
+- Ultrasoon afstandssensor
+- Vcc = 5 V
+- Icc = <2 - 15 mA
+- Bereik: 20 - 4500 mm
+- Resolutie: 3 mm
+- Sensor hoek: <15°
+- Ultrasone freq.: 40 kHz
+- Eenheidsprijs: €3,00 - 7,21
+
+winkel:https://www.tinytronics.nl/shop/nl/sensoren/afstand/ultrasonische-sensor-hc-sr04
 
 ### Elektrisch schema
 
@@ -137,6 +223,9 @@ Sensoren
 ### Data I/O
 
 ### stuurschakeling
+|Component|Input|Output|
+------
+||||||||
 
 ### Sensorschakeling
 
