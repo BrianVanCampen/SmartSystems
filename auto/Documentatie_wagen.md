@@ -67,3 +67,99 @@ temp
 
 ## Mindmap
 ![image](https://user-images.githubusercontent.com/91600019/157880859-9cdfd92e-9ed3-454a-b55d-052e98593a98.png)
+
+
+## Hardware Analyse
+
+### blokschema
+
+### Sturingschakeling:
+
+**Microcontroller:**
+
+**ESP32-WROOM-32 Dev. Board:**
+- ESP32 WROOM DevKit module
+- Core: ESP32-D0WD
+- SPI flash: 4 MB, 32 Mbits, 3.3 V
+- Crystal: 40 MHz
+- Vcc = 3.0 - 3.6 V
+- Ioperating = 80 mA
+- Imin delivered by power supply = 500 mA
+- Module interfaces: SD card, UART, SPI, SDIO, I2C, LED PWM, Motor PWM, I2S, IR, pulse counter, GPIO, capacitive, touch sensor, ADC, DAC, TWAI.
+- On-chip sensor: Hall sensor
+- Operating temperature: -40°C ~ +85°C
+- Eenheidsprijs: €11,98
+- Lead time: 10 weken (op voorraad)
+
+Winkel : https://www.bol.com/be/nl/p/esp-wroom-32-ontwikkelbord/9200000114634593/?Referrer=ADVNLGOO002013-G-137016892532-S-1080766724149-9200000114634593&gclid=CjwKCAjwoduRBhA4EiwACL5RP3gmvcCjgniShMIKJF6Tj-c8ILHCnZigB3Wc8GkKKFBQUkc2TnLEZBoC6nkQAvD_BwE
+
+**Sturing**
+
+**LA6583MC-AH**
+- Motor driver
+- Single Phase Driver With Hall Sensor Method (no Speed Control)
+- SMD IC
+- Output Configuration: Half Bridge, 2 outputs
+- Vcc = 2.8 - 14 V
+- Vcc max = 15 V
+- Icc drive = 4 - 6 - 9 mA
+- IOUT max = 800 mA
+- Eenheidsprijs: 0,526€
+- Lead time: onbekend (op voorraad)
+
+Winkel: https://be.farnell.com/on-semiconductor/la6583mc-ah/mtr-drvr-sngl-phase-fan-motor/dp/2728202?st=LA6583MC-AH
+
+**Display**
+
+**Seeed Studio Grove OLED Display**
+
+- 0.96" OLED Display 128x64
+- Vcc = 3.3 - 5 V
+- Icc = 9 - 15 mA
+- Controller: SSD1315
+- Comm protocol: I²C
+- Connector: JST 4P
+- Eenheidsprijs: €4,60 - €7,00
+
+Winkel: https://www.tinytronics.nl/shop/nl/displays/oled/0.96-inch-oled-display-128*64-pixels-wit-i2c
+
+**Voeding**
+
+**Sensorschakeling**
+
+microcontroller:
+Sensoren
+
+### Elektrisch schema
+
+## Software Analyse
+
+### Data I/O
+
+### stuurschakeling
+
+### Sensorschakeling
+
+### State diagram /flowchart
+
+**manueel**
+**automatisch**
+**patroon**
+
+## Plan
+
+### Epics
+
+1. Analyse
+2. PCB ontwerp
+3. Software ontwikkeling
+4. Hardware samenstelling
+5. Software implementatie
+6. Test
+
+### Sprints
+- Analyse 
+- PCB ontwwerp
+- Afwezig internationaal week Brugge
+- Software ontwikkeling
+- Hardware samenstelling & Software implementatie & Test
