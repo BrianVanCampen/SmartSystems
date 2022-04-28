@@ -2,14 +2,18 @@
 ### Brian Van Campen
 ### 2ITIOT
 
-## Probleemstelling
+# Probleemstelling
 
 Ontwerp van een schakelingen om een robotwagentje aan te sturen. Dit is opgedeeld in twee schakelingen. Een stuurschakeling PCB met een ESP32 en een trackermodule PCB met een ATMega en sensoren om de sturing te kunnen realiseren.
 
 
-## As-Is situatie
+# As-Is situatie
+
 ### MotorWagen: 
-temp
+
+![image](https://user-images.githubusercontent.com/91600019/165828954-e81f2889-8426-4b7b-abec-2da97f2bf552.png)
+
+
 ### Specificaties:
 
 - Voltage Regulator LM7805 through hole
@@ -22,7 +26,7 @@ temp
 - 2x 2 GPIO spare pins
 
 
-## To-Be situatie
+# To-Be situatie
 
 ### Goals:
 - Sensoren toepassen in een praktische schakeling.
@@ -30,10 +34,8 @@ temp
 - Besturing voorzien.
 
 
-
-
-
 ## Schakelingen voor robotwagen
+
 ### Stuurschakeling: 
 <ul>
   <li>2x UART connectoren</li>
@@ -45,9 +47,9 @@ temp
     
   </ul>
   <li>OLED-scherm met I²C-sturing op PCB</li>
-  <li>2x SMD Motor driver, vb. LA6583MC-AH</li>
+  <li>SMD Motor driver, vb. TC78H621FNG(O,EL)</li>
   <li>Polariteitsbeveiliging</li>
-  <li>ESP32 WROOM DevKit module</li>
+  <li>ESP32 WROVER</li>
   <li>Batterij aansluiting (GND, VCC)</li>
   <li>Mounting drill holes, voor bevestiging op wagentje</li>
 </ul>
@@ -60,54 +62,39 @@ temp
   </ul>
   
 ### Sturing
+
 <ul>
  <li>Manueel of automatisch rijden</li>
  <li>Hindernissen herkennen en vermijden</li>
 </ul>
 
 ## Mindmap
+
 ![image](https://user-images.githubusercontent.com/91600019/157880859-9cdfd92e-9ed3-454a-b55d-052e98593a98.png)
 
 
-## Hardware Analyse
+# Hardware Analyse
 
-### blokschema
+## blokschema
+
+![image](https://user-images.githubusercontent.com/91600019/165833572-007639a2-1c30-4c73-964b-e7c1c6aa8758.png)
+
 
 ### Sturingschakeling:
 
 **Microcontroller:**
 
-**ESP32-WROOM-32 Dev. Board:**
-- ESP32 WROOM DevKit module
-- Core: ESP32-D0WD
-- SPI flash: 4 MB, 32 Mbits, 3.3 V
-- Crystal: 40 MHz
-- Vcc = 3.0 - 3.6 V
-- Ioperating = 80 mA
-- Imin delivered by power supply = 500 mA
-- Module interfaces: SD card, UART, SPI, SDIO, I2C, LED PWM, Motor PWM, I2S, IR, pulse counter, GPIO, capacitive, touch sensor, ADC, DAC, TWAI.
-- On-chip sensor: Hall sensor
-- Operating temperature: -40°C ~ +85°C
-- Eenheidsprijs: €11,98
-- Lead time: 10 weken (op voorraad)
+**ESP32-WROVER:**
+- ESP32 WROVER
 
 Winkel : https://www.bol.com/be/nl/p/esp-wroom-32-ontwikkelbord/9200000114634593/?Referrer=ADVNLGOO002013-G-137016892532-S-1080766724149-9200000114634593&gclid=CjwKCAjwoduRBhA4EiwACL5RP3gmvcCjgniShMIKJF6Tj-c8ILHCnZigB3Wc8GkKKFBQUkc2TnLEZBoC6nkQAvD_BwE
 
 **Sturing**
 
-**LA6583MC-AH**
-- Motor driver
-- Single Phase Driver With Hall Sensor Method (no Speed Control)
-- SMD IC
-- Output Configuration: Half Bridge, 2 outputs
-- Vcc = 2.8 - 14 V
-- Vcc max = 15 V
-- Icc drive = 4 - 6 - 9 mA
-- IOUT max = 800 mA
-- Eenheidsprijs: 0,526€
-- Lead time: onbekend (op voorraad)
+**TC78H621FNG(O,EL)**
 
-Winkel: https://be.farnell.com/on-semiconductor/la6583mc-ah/mtr-drvr-sngl-phase-fan-motor/dp/2728202?st=LA6583MC-AH
+
+Winkel: https://be.farnell.com/toshiba/tc78h621fng-o-el/motor-driver-ic-h-bridge-tssop/dp/3869999?st=motordriver
 
 **Display**
 
@@ -121,7 +108,7 @@ Winkel: https://be.farnell.com/on-semiconductor/la6583mc-ah/mtr-drvr-sngl-phase-
 - Connector: JST 4P
 - Eenheidsprijs: €4,60 - €7,00
 
-Winkel: https://www.tinytronics.nl/shop/nl/displays/oled/0.96-inch-oled-display-128*64-pixels-wit-i2c
+Winkel: https://www.tinytronics.nl/shop/nl/displays/oled/0.96-inch-oled-display-128*64-pixels-wit
 
 **Voeding**
 
@@ -173,7 +160,7 @@ Winkel :https://nl.farnell.com/diodes-inc/dmg3414u/mosfet-n-ch-w-diode-20v-4-2a-
 
 microcontroller:
 
-- ATmega328p of arduino Nano
+- ATmega328p 
 
 reden: sensoren moeten op een apart bordje komen zodat de line tracker dicht tegen de grond zit. eenvoudiger om een extra Microcontroller hiervoor te gebruiken door teveel verbindingen --> 1 I²C verbinding nodig tussen de 2 bordjes 
 
@@ -216,24 +203,66 @@ winkel: https://www.tinytronics.nl/shop/nl/sensoren/afstand/sharp-optische-afsta
 
 winkel:https://www.tinytronics.nl/shop/nl/sensoren/afstand/ultrasonische-sensor-hc-sr04
 
-### Elektrisch schema
+## Elektrisch schema
+
+**ESP32**
+
+![image](https://user-images.githubusercontent.com/91600019/165834512-cccccd1c-e59d-42e8-957e-40d403bd0062.png)
+
+**ATmega328**
+
+![image](https://user-images.githubusercontent.com/91600019/165836377-3e437a59-0724-4ad9-a4ea-843643a98a9a.png)
+
+
+## PCB ontwerp
+
+**ESP32**
+
+![image](https://user-images.githubusercontent.com/91600019/165842138-0b7bb876-22ea-4149-a55b-93f77bf629ef.png)
+
+
+**ATmega328**
+
+![image](https://user-images.githubusercontent.com/91600019/165841942-ea992968-71c3-4f2d-9e6e-61a4856d272d.png)
+
+
 
 ## Software Analyse
 
 ### Data I/O
 
 ### stuurschakeling
+
 |Component|Input|Output|
-------
-||||||||
+|---------|-----|------|
+|ESP-Wrover|config data motor aansturing wifi-sensordata|return data motor|
+|motor driver|Motor aansturing PWM|-|
+|OLED Display|return data I²C|-|
 
 ### Sensorschakeling
+
+|Component|Input|Output|
+|---------|-----|------|
+|ATMega| Line Tracker data D1-D8 Ultrasoon sensor echo IR-afstandssensor afstand als analoge spanning. |Sensordata I²C Line Tracker IR aan/uit Ultrasoon sensor trigger |
+|Line Tracker|IR aan/uit|Data van 8x IR sensoren D1-D8.|
+|Ultrasoon sensor|Trigger|Echo|
+|IR-afstandssensor|-|afstand analoge spanning|
 
 ### State diagram /flowchart
 
 **manueel**
+
+![image](https://user-images.githubusercontent.com/91600019/165838316-70b6748c-1aca-4553-8da2-9e5d61a11ae8.png)
+
+
 **automatisch**
+
+![image](https://user-images.githubusercontent.com/91600019/165838830-11321749-1f95-4515-b68c-e34e35ae918e.png)
+
+
 **patroon**
+
+![image](https://user-images.githubusercontent.com/91600019/165839465-ea7a9d60-4b92-49a7-be43-a56b4c27d8b3.png)
 
 ## Plan
 
@@ -245,6 +274,74 @@ winkel:https://www.tinytronics.nl/shop/nl/sensoren/afstand/ultrasonische-sensor-
 4. Hardware samenstelling
 5. Software implementatie
 6. Test
+
+## Stories
+
+### 1. Analyse
+
+**Analyse maken**
+
+
+**Acceptance Criteria:**
+
+- Probleemstelling in 2 tot 5 lijnen
+- Mindmap
+- Hardware analyse
+- Hardware blokdiaram
+- Specificatie tabel
+- Argumentatie en alternatieven tabel
+- Software analyse
+- Data In -en Outputs
+- State diagram
+- Flowchart
+- Release plan
+
+### 2.PCB ontwerp
+
+**Sturingsschakeling**
+
+
+**Acceptance Criteria:**
+
+- 2x UART connectoren
+- 3x I²C connectoren
+- Voltage regulator 5V & 3.3V
+- Polariteitsbeveiliging
+- SMD Motor driver
+- OLED-scherm met I²C-sturing op PCB
+- Batterij aansluiting (GND, VCC)
+- Drill holes voor bevestiging van de PCB op het wagentje.
+
+**Sensor schakeling**
+
+**Acceptance Criteria:**
+
+- Ultrasoon
+- IR afstandssensoren
+- 8 channel IR Line tracker
+
+### 3.Software ontwikkeling
+
+- Manuele bediening
+- Automatisch rijden
+- Patroon volgen
+
+### 4.Hardware samenstelling
+
+- Sturings PCB solderen
+- Sensor PCB solderen
+- Robotwagen samenstellen
+
+### 5.Software implementatie
+
+- ESP32 programmeren
+- ATmega328 programmeren
+
+### 6.Test
+
+- Componenten
+- Data in & out
+- Modussen 
 
 ### Sprints
 - Analyse 
