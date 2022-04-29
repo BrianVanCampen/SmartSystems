@@ -218,12 +218,12 @@ winkel:https://www.tinytronics.nl/shop/nl/sensoren/afstand/ultrasonische-sensor-
 
 **ESP32**
 
-![image](https://user-images.githubusercontent.com/91600019/165842138-0b7bb876-22ea-4149-a55b-93f77bf629ef.png)
+![image](https://user-images.githubusercontent.com/91600019/165935490-a91bb53d-2611-4c0b-9848-46969a8f6130.png)
 
 
 **ATmega328**
 
-![image](https://user-images.githubusercontent.com/91600019/165841942-ea992968-71c3-4f2d-9e6e-61a4856d272d.png)
+![image](https://user-images.githubusercontent.com/91600019/165931130-5fdbf826-1ca4-4c9e-977c-8288690cea24.png)
 
 
 
