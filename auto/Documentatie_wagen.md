@@ -77,7 +77,7 @@ Ontwerp van een schakelingen om een robotwagentje aan te sturen. Dit is opgedeel
 
 ## blokschema
 
-![image](https://user-images.githubusercontent.com/91600019/165833572-007639a2-1c30-4c73-964b-e7c1c6aa8758.png)
+![image](https://user-images.githubusercontent.com/91600019/165936682-b576b309-730a-43de-adba-fa8ccc5e27eb.png)
 
 
 ### Sturingschakeling:
@@ -345,7 +345,7 @@ winkel:https://www.tinytronics.nl/shop/nl/sensoren/afstand/ultrasonische-sensor-
 
 ### Sprints
 - Analyse 
-- PCB ontwwerp
+- PCB ontwerp
 - Afwezig internationaal week Brugge
 - Software ontwikkeling
 - Hardware samenstelling & Software implementatie & Test
