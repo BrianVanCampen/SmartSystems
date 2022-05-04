@@ -223,7 +223,7 @@ winkel:https://www.tinytronics.nl/shop/nl/sensoren/afstand/ultrasonische-sensor-
 
 **ATmega328**
 
-![image](https://user-images.githubusercontent.com/91600019/165931130-5fdbf826-1ca4-4c9e-977c-8288690cea24.png)
+![image](https://user-images.githubusercontent.com/91600019/166685380-d3eef0ae-c65c-43bf-a2cf-0a45c3396451.png)
 
 
 
