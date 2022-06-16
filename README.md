@@ -1,2 +1,0 @@
-# SmartSystems
-Smart Systems : Wagen
