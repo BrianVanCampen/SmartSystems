@@ -225,6 +225,9 @@ winkel:https://www.tinytronics.nl/shop/nl/sensoren/afstand/ultrasonische-sensor-
 
 ![image](https://user-images.githubusercontent.com/91600019/166685380-d3eef0ae-c65c-43bf-a2cf-0a45c3396451.png)
 
+## Hardware implementatie
+
+![image](https://user-images.githubusercontent.com/91600019/174102558-d53535ed-da1e-4fde-b11a-41aba0637adb.png)
 
 
 ## Software Analyse
@@ -235,9 +238,9 @@ winkel:https://www.tinytronics.nl/shop/nl/sensoren/afstand/ultrasonische-sensor-
 
 |Component|Input|Output|
 |---------|-----|------|
-|ESP-Wrover|config data motor aansturing wifi-sensordata|return data motor|
+|ESP-Wrover| data motor aansturing wifi-sensordata|data motor|
 |motor driver|Motor aansturing PWM|-|
-|OLED Display|return data I²C|-|
+|OLED Display|data I²C|display info|
 
 ### Sensorschakeling
 
@@ -246,7 +249,7 @@ winkel:https://www.tinytronics.nl/shop/nl/sensoren/afstand/ultrasonische-sensor-
 |ATMega| Line Tracker data D1-D8 Ultrasoon sensor echo IR-afstandssensor afstand als analoge spanning. |Sensordata I²C Line Tracker IR aan/uit Ultrasoon sensor trigger |
 |Line Tracker|IR aan/uit|Data van 8x IR sensoren D1-D8.|
 |Ultrasoon sensor|Trigger|Echo|
-|IR-afstandssensor|-|afstand analoge spanning|
+|IR-afstandssensor|IR aan/uit|afstand analoge spanning|
 
 ### State diagram /flowchart
 
