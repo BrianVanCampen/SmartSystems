@@ -272,17 +272,109 @@ winkel:https://www.tinytronics.nl/shop/nl/sensoren/afstand/ultrasonische-sensor-
 ![image](https://user-images.githubusercontent.com/91600019/174058926-b8665421-69ea-4248-9bc0-40dfa6a8f0d0.png)
 
 
-## web interactie
+# web interactie
 
-### Node-RED
+## Node-RED
 
+Data wordt grotendeels verstuurd naar de ESP32 (broker MQTT en Node-RED) .
+Alle data die naar deze uitgestuurd word zal van het type int zijn.
+
+**PompController:**
+
+<ol>
+
+  <ul>
+    <li>Node-RED -> MQTT -> ESP32 op Stuurschakeling :</li>
+    <ul>
+      <li>Topics: Motor OF KeuzeMenu</li>
+      <li>int "0" => Links</li>
+      <li>int "1" => Rechtdoor</li>
+      <li>int "2" => Rechts</li>
+      <li>int "3" => Achteruit</li>
+      <li>int "default" => Stop</li>
+      <li>int "8" => Automatisch</li>
+      <li>int "9" => Handmatig</li>
+    </ul>
+</ol>
+    
+
+| HTTP        |MQTT   |
+| ----------- | ----------- |
+| Vrij zwaar protocol: de header van een package is al groter dan 1 bericht van MQTT
+(min +- 26 bytes header vs enkele bytes MQTT message) | Weinig data → meer keuzes op fysieke laag, trage links worden mogelijk |
+| Software stack / Software stack / Library Library is vrij zwaar heeft een zeer kleine footprint | Lightweight → protocol last ook in kleine devices, sensors.. met weinig geheugen & cpu power. |
+| Geen ingebouwde Standaard enkele QoS mogelijkheden| Standardisatie, compatibilieit → elk device kan hetzelfde protocol gebruiken → MQTT bouwt verder op de TCP/IP stack|
+| | Vereenvoudiging → bij complexe configuraties (zie principe MQTT) |
+
+=>MQTT omdat dit protocol gemaakt is om kleinere bytes aan data door te sturen en dit makkelijk te implementeren is in de opstelling.
+
+<div style="page-break-after: always"></div>
+
+### IOT Dashboard/Platform
+
+**Er is een platform/server nodig om:**
+
+- Verzamelde data weer te geven
+- Controle opdrachten te sturen
+
+
+|Node-RED|Thingsboard|Freeboard.io|
+| ----------- | ----------- | ----------- |
+| Open-source | Open-source+ professional(betalend) | Open-source |
+| Flows | Entities |  |
+| no API | API |  |
+| Supports MQTT out of the box | Supports MQTT out of the box | Does not support MQTT out of the box (Not actively developed Plugin available) |
+| Makkelijk om snel data te kunnen verwerken naar een dashboard aan de hand van flows | Eerder gemaakt voor professionele klanten, werkt met verschillende entities voor apparaten en klanten. |  |
+
+=>Node-RED gebruiken omdat dit ingebouwde MQTT support heeft (Wat Freeboard.io niet heeft) en omdat dit op maat is van het project (Thingsboard zou te uitgebreid zijn).
+
+
+<div style="page-break-after: always"></div>
+
+## Beschrijving van de mogelijke interfaces
+
+de wagen maakt gebruik van Node-RED die gaat communniceren met een ESP32. Hieruit word de controller/sensor bord aangestuurd.
+
+
+![image](https://user-images.githubusercontent.com/91600019/174111284-e7ee6737-3326-4733-9979-87b1d71adcb4.png)
+
+
+## Handleiding Web Interactie
+
+Dit is de handleiding om te starten met Node-RED:
+
+1. je surft naar https://nodered.org/
+2. je scrollt tot aan Get Started 
+![image](https://user-images.githubusercontent.com/91600019/173856720-546ec266-002b-4d37-b8f8-440766e076b4.png)
+3. volg deze stappen: https://nodered.org/docs/getting-started/local
+4. Je typt in de console
+
+       $ node-red
+
+6. je gaat naar deze link
+![image](https://user-images.githubusercontent.com/91600019/173860103-977e0776-5aac-4d56-8cdd-93d900304497.png)
+6. Hier kan je de Flow van het project aanmaken
+![image](https://user-images.githubusercontent.com/91600019/174112013-943ca467-40eb-4cc3-9737-398eb985c8da.png)
+7. Voor de ESP32 kan je het bestand importeren boven aan rechts of CTRL+I 
+![image](https://user-images.githubusercontent.com/91600019/173861188-8d6f1d11-af6c-4de9-aa65-3989a1abe84f.png)
+8. zorg er ook voor dat je in Node-RED de plugin Node-red-dashboard installeert door bovenaan rechts manage pallete te kiezen 
+9. vervolgens zoek je Node-red-dashboard in de install tab
+![image](https://user-images.githubusercontent.com/91600019/173862159-83b7e537-2add-4789-9cc7-1186018d7cdd.png)
+
+10. klik op dashboard bovenaan rechts
+![image](https://user-images.githubusercontent.com/91600019/173865857-e49763fd-dbe3-4b9e-a35d-ddac99b32a12.png)
+
+11. hier kan je van alles aanpassen
+12. Om de UI te openen klik je op het vierkantje bovenaan rechts of in de URL type .../ui/
+![image](https://user-images.githubusercontent.com/91600019/174112705-44de53b0-fcd4-4458-b79b-cab32db9c051.png)
 ![image](https://user-images.githubusercontent.com/91600019/174067684-b87f60a8-f7c7-40ac-8dc8-87defbadbd68.png)
 
-### Flow
-
+### Flow van ESP32 Auto
 ![image](https://user-images.githubusercontent.com/91600019/174067670-8e435f90-a538-40ed-ad32-c99d51eb7184.png)
 
+[ESP_CAR.zip](https://github.com/BrianVanCampen/SmartSystems/files/8920513/ESP_CAR.zip)
 
+  
 ## Plan
 
 ### Epics
