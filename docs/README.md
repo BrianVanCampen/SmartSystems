@@ -279,7 +279,7 @@ winkel:https://www.tinytronics.nl/shop/nl/sensoren/afstand/ultrasonische-sensor-
 Data wordt grotendeels verstuurd naar de ESP32 (broker MQTT en Node-RED) .
 Alle data die naar deze uitgestuurd word zal van het type int zijn.
 
-**PompController:**
+**Sturing:**
 
 <ol>
 
