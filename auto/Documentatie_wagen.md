@@ -254,6 +254,8 @@ winkel:https://www.tinytronics.nl/shop/nl/sensoren/afstand/ultrasonische-sensor-
 
 ![image](https://user-images.githubusercontent.com/91600019/165838316-70b6748c-1aca-4553-8da2-9e5d61a11ae8.png)
 
+![image](https://user-images.githubusercontent.com/91600019/174058207-b8526711-b13f-4172-a294-bca070d36284.png)
+
 
 **automatisch**
 
@@ -263,6 +265,9 @@ winkel:https://www.tinytronics.nl/shop/nl/sensoren/afstand/ultrasonische-sensor-
 **patroon**
 
 ![image](https://user-images.githubusercontent.com/91600019/165839465-ea7a9d60-4b92-49a7-be43-a56b4c27d8b3.png)
+
+![image](https://user-images.githubusercontent.com/91600019/174058926-b8665421-69ea-4248-9bc0-40dfa6a8f0d0.png)
+
 
 ## Plan
 
