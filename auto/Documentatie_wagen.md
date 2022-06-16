@@ -273,11 +273,11 @@ winkel:https://www.tinytronics.nl/shop/nl/sensoren/afstand/ultrasonische-sensor-
 
 ### Node-RED
 
-![image](https://user-images.githubusercontent.com/91600019/174063659-2d29c704-2f76-4320-94a8-98cd41587f9f.png)
+![image](https://user-images.githubusercontent.com/91600019/174067684-b87f60a8-f7c7-40ac-8dc8-87defbadbd68.png)
 
 ### Flow
 
-![image](https://user-images.githubusercontent.com/91600019/174063739-7d6a01d8-76ba-43b7-a95a-b7b9e2e7248b.png)
+![image](https://user-images.githubusercontent.com/91600019/174067670-8e435f90-a538-40ed-ad32-c99d51eb7184.png)
 
 
 ## Plan
