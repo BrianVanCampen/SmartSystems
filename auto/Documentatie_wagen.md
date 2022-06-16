@@ -269,6 +269,17 @@ winkel:https://www.tinytronics.nl/shop/nl/sensoren/afstand/ultrasonische-sensor-
 ![image](https://user-images.githubusercontent.com/91600019/174058926-b8665421-69ea-4248-9bc0-40dfa6a8f0d0.png)
 
 
+## web interactie
+
+### Node-RED
+
+![image](https://user-images.githubusercontent.com/91600019/174063659-2d29c704-2f76-4320-94a8-98cd41587f9f.png)
+
+### Flow
+
+![image](https://user-images.githubusercontent.com/91600019/174063739-7d6a01d8-76ba-43b7-a95a-b7b9e2e7248b.png)
+
+
 ## Plan
 
 ### Epics
