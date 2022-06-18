@@ -244,6 +244,12 @@ winkel:https://www.tinytronics.nl/shop/nl/sensoren/afstand/ultrasonische-sensor-
 
 ![image](https://user-images.githubusercontent.com/91600019/174102558-d53535ed-da1e-4fde-b11a-41aba0637adb.png)
 
+## link naar PCB downloads
+
+[Motorsturing_VCB_laatsteVersie.zip](https://github.com/BrianVanCampen/SmartSystems/files/8933240/Motorsturing_VCB_laatsteVersie.zip)
+
+[Sensorbord_VCB_laatsteVersie.zip](https://github.com/BrianVanCampen/SmartSystems/files/8933241/Sensorbord_VCB_laatsteVersie.zip)
+
 
 ## Software Analyse
 
@@ -386,10 +392,20 @@ Dit is de handleiding om te starten met Node-RED:
 
 ### Flow van ESP32 Auto
 ![image](https://user-images.githubusercontent.com/91600019/174067670-8e435f90-a538-40ed-ad32-c99d51eb7184.png)
-
-[ESP_CAR.zip](https://github.com/BrianVanCampen/SmartSystems/files/8920513/ESP_CAR.zip)
-
   
+### link download flow  
+  
+[ESP_CAR.zip](https://github.com/BrianVanCampen/SmartSystems/files/8920513/ESP_CAR.zip)
+  
+## Link naar Arduino code
+
+[Arduino code](https://github.com/BrianVanCampen/SmartSystems/blob/main/auto/ESP32_wagen_code/ESP32_wagen_code.ino)
+  
+## Demo software met Node-red
+
+[Panopto link test demo](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f34ea14c-964f-4501-922b-aeb8008a4193) 
+
+
 ## Plan
 
 ### Epics
