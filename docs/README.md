@@ -157,7 +157,7 @@ reden: 	De DMG3414U heeft een lage threshold spanning zodat deze ook geleid bij 
 
 Winkel :https://nl.farnell.com/diodes-inc/dmg3414u/mosfet-n-ch-w-diode-20v-4-2a-sot23/dp/2061404?st=mosfet%20n%20smd
 
-**Sensorschakeling**
+### Sensorschakeling
 
 microcontroller:
 
