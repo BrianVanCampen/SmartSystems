@@ -1,6 +1,7 @@
 # Documentatie Robotwagen
-### Brian Van Campen
-### 2ITIOT
+
+#### Brian Van Campen
+#### 2ITIOT
 
 # Probleemstelling
 
@@ -9,12 +10,12 @@ Ontwerp van een schakelingen om een robotwagentje aan te sturen. Dit is opgedeel
 
 # As-Is situatie
 
-### MotorWagen: 
+## MotorWagen: 
 
 ![image](https://user-images.githubusercontent.com/91600019/165828954-e81f2889-8426-4b7b-abec-2da97f2bf552.png)
 
 
-### Specificaties:
+## Specificaties:
 
 - Voltage Regulator LM7805 through hole
 - Motor driver SN754410 through hole + 2x 2 motor pins: 1A, 1B, 2A, 2B
@@ -28,7 +29,7 @@ Ontwerp van een schakelingen om een robotwagentje aan te sturen. Dit is opgedeel
 
 # To-Be situatie
 
-### Goals:
+## Goals:
 - Sensoren toepassen in een praktische schakeling.
 - Voldoende materiaal genereren voor gebruik in het eerste jaar.
 - Besturing voorzien.
@@ -68,7 +69,7 @@ Ontwerp van een schakelingen om een robotwagentje aan te sturen. Dit is opgedeel
  <li>Hindernissen herkennen en vermijden</li>
 </ul>
 
-## Mindmap
+### Mindmap
 
 ![image](https://user-images.githubusercontent.com/91600019/157880859-9cdfd92e-9ed3-454a-b55d-052e98593a98.png)
 
@@ -214,29 +215,29 @@ winkel:https://www.tinytronics.nl/shop/nl/sensoren/afstand/ultrasonische-sensor-
 ![image](https://user-images.githubusercontent.com/91600019/165836377-3e437a59-0724-4ad9-a4ea-843643a98a9a.png)
 
 
-## PCB ontwerp
+### PCB ontwerp
 
-**ESP32**
 
-### PCB Design
+
+#### PCB Design **ESP32**
 
 ![image](https://user-images.githubusercontent.com/91600019/174428939-e23e0100-fb52-4927-b52b-167fe23f8459.png)
 
-### 3D
+### 3D **ESP32**
 
 ![image](https://user-images.githubusercontent.com/91600019/165935490-a91bb53d-2611-4c0b-9848-46969a8f6130.png)
 
 
 
 
-**ATmega328**
 
-### PCB Design
+
+### PCB Design **ATmega328**
 
 ![image](https://user-images.githubusercontent.com/91600019/174428979-35db4cb0-4c31-49d5-a83b-9002a5c8104e.png)
 
 
-### 3D
+### 3D **ATmega328**
 
 ![image](https://user-images.githubusercontent.com/91600019/166685380-d3eef0ae-c65c-43bf-a2cf-0a45c3396451.png)
 
@@ -251,9 +252,9 @@ winkel:https://www.tinytronics.nl/shop/nl/sensoren/afstand/ultrasonische-sensor-
 [Sensorbord_VCB_laatsteVersie.zip](https://github.com/BrianVanCampen/SmartSystems/files/8933241/Sensorbord_VCB_laatsteVersie.zip)
 
 
-## Software Analyse
+# Software Analyse
 
-### Data I/O
+## Data I/O
 
 ### stuurschakeling
 
@@ -272,7 +273,7 @@ winkel:https://www.tinytronics.nl/shop/nl/sensoren/afstand/ultrasonische-sensor-
 |Ultrasoon sensor|Trigger|Echo|
 |IR-afstandssensor|IR aan/uit|afstand analoge spanning|
 
-### State diagram /flowchart
+## State diagram /flowchart
 
 **manueel**
 
@@ -293,9 +294,9 @@ winkel:https://www.tinytronics.nl/shop/nl/sensoren/afstand/ultrasonische-sensor-
 ![image](https://user-images.githubusercontent.com/91600019/174058926-b8665421-69ea-4248-9bc0-40dfa6a8f0d0.png)
 
 
-# web interactie
+## web interactie
 
-## Node-RED
+### Node-RED
 
 Data wordt grotendeels verstuurd naar de ESP32 (broker MQTT en Node-RED) .
 Alle data die naar deze uitgestuurd word zal van het type int zijn.
@@ -352,7 +353,7 @@ Alle data die naar deze uitgestuurd word zal van het type int zijn.
 
 <div style="page-break-after: always"></div>
 
-## Beschrijving van de mogelijke interfaces
+### Beschrijving van de mogelijke interfaces
 
 de wagen maakt gebruik van Node-RED die gaat communniceren met een ESP32. Hieruit word de controller/sensor bord aangestuurd.
 
@@ -406,9 +407,9 @@ Dit is de handleiding om te starten met Node-RED:
 [Panopto link test demo](https://ap.cloud.panopto.eu/Panopto/Pages/Viewer.aspx?id=f34ea14c-964f-4501-922b-aeb8008a4193) 
 
 
-## Plan
+# Plan
 
-### Epics
+## Epics
 
 1. Analyse
 2. PCB ontwerp
