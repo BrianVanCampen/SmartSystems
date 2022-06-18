@@ -223,7 +223,7 @@ winkel:https://www.tinytronics.nl/shop/nl/sensoren/afstand/ultrasonische-sensor-
 
 ![image](https://user-images.githubusercontent.com/91600019/174428939-e23e0100-fb52-4927-b52b-167fe23f8459.png)
 
-### 3D **ESP32**
+#### 3D **ESP32**
 
 ![image](https://user-images.githubusercontent.com/91600019/165935490-a91bb53d-2611-4c0b-9848-46969a8f6130.png)
 
@@ -232,12 +232,12 @@ winkel:https://www.tinytronics.nl/shop/nl/sensoren/afstand/ultrasonische-sensor-
 
 
 
-### PCB Design **ATmega328**
+#### PCB Design **ATmega328**
 
 ![image](https://user-images.githubusercontent.com/91600019/174428979-35db4cb0-4c31-49d5-a83b-9002a5c8104e.png)
 
 
-### 3D **ATmega328**
+#### 3D **ATmega328**
 
 ![image](https://user-images.githubusercontent.com/91600019/166685380-d3eef0ae-c65c-43bf-a2cf-0a45c3396451.png)
 
